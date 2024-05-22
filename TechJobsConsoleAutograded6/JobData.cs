@@ -6,6 +6,7 @@ namespace TechJobsConsoleAutograded6
 	public class JobData
 	{
         static List<Dictionary<string, string>> AllJobs = new List<Dictionary<string, string>>();
+        // static readonly List<Dictionary<string, string>> AllJobs = new List<Dictionary<string, string>>();
         static List<Dictionary<string, string>> AllJobsSafe = new List<Dictionary<string, string>>();
         // AllJobs.AddRange(AllJobsSafe);
         static bool IsDataLoaded = false;
