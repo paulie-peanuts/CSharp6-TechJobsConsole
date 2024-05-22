@@ -6,6 +6,8 @@ namespace TechJobsConsoleAutograded6
 	public class JobData
 	{
         static List<Dictionary<string, string>> AllJobs = new List<Dictionary<string, string>>();
+        static List<Dictionary<string, string>> AllJobsSafe = new List<Dictionary<string, string>>();
+        // AllJobs.AddRange(AllJobsSafe);
         static bool IsDataLoaded = false;
 
         public static List<Dictionary<string, string>> FindAll()
@@ -133,8 +135,10 @@ namespace TechJobsConsoleAutograded6
                 {
                     rowDict.Add(headers[i], row[i]);
                 }
-                AllJobs.Add(rowDict);
+                AllJobsSafe.Add(rowDict);
+
             }
+                AllJobs.AddRange(AllJobsSafe);
 
             IsDataLoaded = true;
         }
